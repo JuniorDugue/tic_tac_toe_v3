@@ -1,12 +1,13 @@
 import React from 'react'
+import { Button } from "./styles/ButtonStyled"
 
-function Square({value, children}){
+function Square({value, }){
   console.log(value)
 
   return (
-    <button type="button">
-      {children}
-    </button>
+    <Button type="button">
+      {value}
+    </Button>
   )
 }
 
