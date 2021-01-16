@@ -17,5 +17,12 @@ export const Button = styled.button`
   &:last-child {
     border-right: none;
   }
-  color: rgb(248, 245, 245);
+  color: #644536;
 `;
+
+// 18206F
+// EBEBD3
+
+
+// 17255A
+// F5E2C8
