@@ -5,4 +5,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: rgb(248, 245, 245);
+  background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
 `;

@@ -17,4 +17,5 @@ export const Button = styled.button`
   &:last-child {
     border-right: none;
   }
+  color: rgb(248, 245, 245);
 `;

@@ -1,14 +1,14 @@
-import React from 'react'
-import { Button } from "./styles/ButtonStyled"
+import React from 'react';
+import { Button } from './styles/ButtonStyled';
 
-function Square({value, onClick }){
+function Square({ value, onClick }) {
   // console.log(value)
 
   return (
-    <Button type="button" onClick={(e) => {console.log(value)}}>
+    <Button type="button" onClick={onClick}>
       {value}
     </Button>
-  )
+  );
 }
 
-export default Square
+export default Square;
