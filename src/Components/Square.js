@@ -1,11 +1,13 @@
 import React from 'react';
 import { Button } from './styles/ButtonStyled';
 
-function Square({ value, onClick }) {
-  // console.log(value)
-  console.log('square rerender')
+function Square({ value, onClick, isWinningSquare }) {
   return (
-    <Button type="button" onClick={onClick}>
+    <Button
+      type="button"
+      onClick={onClick}
+      style={{ fontWeight: isWinningSquare ? 'bold' : 'normal' }}
+    >
       {value}
     </Button>
   );

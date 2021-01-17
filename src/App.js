@@ -7,16 +7,17 @@ import { GlobalStyle } from './Components/styles/globalStyles';
 import { calculateWinner } from './helpers';
 
 function App() {
-  const [history, setHistory] = useState([
-    { board: Array(9).fill(null), isXNext: true },
-  ]);
+  const New_Game = [{ board: Array(9).fill(null), isXNext: true }];
+
+  const [history, setHistory] = useState(New_Game);
 
   const [currentMove, setCurrentMove] = useState(0);
 
   const current = history[currentMove];
-  console.log(history);
-  const winner = calculateWinner(current.board);
-  console.log(winner);
+  // console.log(history);
+
+  const { winner, winningSquares } = calculateWinner(current.board);
+  // console.log(winner);
 
   const handleSquareClick = position => {
     if (current.board[position] || winner) {
@@ -44,12 +45,24 @@ function App() {
     setCurrentMove(move);
   };
 
+  const onNewGame = () => {
+    setHistory(New_Game);
+    setCurrentMove(0);
+  };
+
   return (
     <Container>
       <GlobalStyle />
       <h1>Tic Tac Toe</h1>
       <StatusMessage winner={winner} current={current} />
-      <Board board={current.board} handleSquareClick={handleSquareClick} />
+      <Board
+        board={current.board}
+        handleSquareClick={handleSquareClick}
+        winningSquares={winningSquares}
+      />
+      <button type="button" onClick={onNewGame}>
+        Start new game
+      </button>
       <History history={history} moveTo={moveTo} currentMove={currentMove} />
     </Container>
   );
