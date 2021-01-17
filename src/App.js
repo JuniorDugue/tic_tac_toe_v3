@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Board from './Components/Board';
 import History from './Components/History';
+import StatusMessage from './Components/StatusMessage';
 import { Container } from './Components/styles/AppContainer';
 import { GlobalStyle } from './Components/styles/globalStyles';
 import { calculateWinner } from './helpers';
@@ -9,7 +10,6 @@ function App() {
   const [history, setHistory] = useState([
     { board: Array(9).fill(null), isXNext: true },
   ]);
-  // const [isXNext, setIsXNext] = useState(false);
 
   const [currentMove, setCurrentMove] = useState(0);
 
@@ -17,10 +17,6 @@ function App() {
   console.log(history);
   const winner = calculateWinner(current.board);
   console.log(winner);
-
-  const message = winner
-    ? `Winner is ${winner}`
-    : `Next player is ${current.isXNext ? 'X' : 'O'}`;
 
   const handleSquareClick = position => {
     if (current.board[position] || winner) {
@@ -52,9 +48,9 @@ function App() {
     <Container>
       <GlobalStyle />
       <h1>Tic Tac Toe</h1>
-      <h2>{message}</h2>
+      <StatusMessage winner={winner} current={current} />
       <Board board={current.board} handleSquareClick={handleSquareClick} />
-      <History history={history} moveTo={moveTo} currentMove={currentMove}/>
+      <History history={history} moveTo={moveTo} currentMove={currentMove} />
     </Container>
   );
 }
