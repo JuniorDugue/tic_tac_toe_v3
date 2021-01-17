@@ -1,19 +1,35 @@
 import React from 'react';
+import { Status } from './styles/StatusMessageStyled';
 
 const StatusMessage = ({ winner, current }) => {
-  // const message = winner
-  //   ? `Winner is ${winner}`
-  //   : `Next player is ${current.isXNext ? 'X' : 'O'}`;
-
   const noMovesLeft = current.board.every(element => element !== null);
   return (
-    <h2>
-      {winner && `Good Game, the winner is ${winner}!`}{' '}
-      {!winner &&
-        !noMovesLeft &&
-        `Next player is ${current.isXNext ? 'X' : 'O'}`}
-      {!winner && noMovesLeft && 'Good Game, X and O are tied!'}
-    </h2>
+    <Status>
+      <h3>
+        {winner && (
+          <>
+            Good Game, the winner is{' '}
+            <span className={winner === 'X' ? 'text-purple' : 'text-peach'}>
+              {winner}
+            </span>
+          </>
+        )}{' '}
+        {!winner && !noMovesLeft && (
+          <>
+            Next player is{' '}
+            <span className={current.isXNext ? 'text-purple' : 'text-peach'}>
+              {current.isXNext ? 'X' : 'O'}{' '}
+            </span>
+          </>
+        )}
+        {!winner && noMovesLeft && (
+          <>
+            Good Game, <span className="text-purple">X</span> and{' '}
+            <span className="text-peach">O</span> are tied!
+          </>
+        )}
+      </h3>
+    </Status>
   );
 };
 

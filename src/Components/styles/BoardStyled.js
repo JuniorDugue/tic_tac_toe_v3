@@ -1,8 +1,6 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const BoardContainer = styled.div`
-  /* outline: 1px solid red; */
-`;
+export const BoardContainer = styled.div``;
 
 export const BoardRows = styled.div`
   display: flex;
