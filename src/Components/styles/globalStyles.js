@@ -2,10 +2,6 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
 
-$purple:#18206F;
-$peach: #EBEBD3;
-$white: #FFFFFF;
-
   *{
     box-sizing: border-box;
   }
@@ -14,5 +10,7 @@ $white: #FFFFFF;
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
+    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+    background-repeat: none;
   }
 `;

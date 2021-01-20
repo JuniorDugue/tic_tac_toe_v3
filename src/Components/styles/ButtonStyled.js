@@ -17,7 +17,18 @@ export const Button = styled.button`
   &:last-child {
     border-right: none;
   }
-  color: #644536;
+
+  .text-purple {
+    color: #18206f;
+    font-weight: bolder;
+  }
+
+  .text-peach {
+    color: #ebebd3;
+    font-weight: bolder;
+  }
+
+  color: #ebebd3;
 
   .square {
     width: 80px;
@@ -45,20 +56,4 @@ export const Button = styled.button`
       }
     }
   }
-
-  .text-purple {
-    color: #18206f;
-    font-weight: bolder;
-  }
-
-  .text-peach {
-    color: #ebebd3;
-    font-weight: bolder;
-  }
 `;
-
-// 18206F
-// EBEBD3
-
-// 17255A
-// F5E2C8

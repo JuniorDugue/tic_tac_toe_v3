@@ -5,6 +5,7 @@ export const HistoryContainer = styled.div`
   text-align: center;
   margin-bottom: 20px;
 `;
+
 export const HistoryUl = styled.ul`
   display: inline-block;
   padding: 0;
