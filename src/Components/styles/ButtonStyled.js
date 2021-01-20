@@ -18,17 +18,15 @@ export const Button = styled.button`
     border-right: none;
   }
 
-  .text-purple {
+  &.text-purple {
     color: #18206f;
     font-weight: bolder;
   }
 
-  .text-peach {
+  &.text-peach {
     color: #ebebd3;
     font-weight: bolder;
   }
-
-  color: #ebebd3;
 
   .square {
     width: 80px;

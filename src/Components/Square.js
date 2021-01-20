@@ -9,7 +9,7 @@ function Square({ value, onClick, isWinningSquare }) {
       className={`square ${isWinningSquare ? 'winning' : ''} ${
         value === 'X' ? 'text-purple' : 'text-peach'
       }`}
-      // style={{ fontWeight: isWinningSquare ? 'bold' : 'normal' }}
+      style={{ fontWeight: isWinningSquare ? 'bold' : 'normal' }}
     >
       {value}
     </Button>

@@ -1,6 +1,5 @@
-
-#### mockup
-![adobe xd mockup of the app](/img/tictactoemockup.jpg)
+#### demo of the app
+![preview of the live app](/img/preview-demo.gif)
 
 ---
 
